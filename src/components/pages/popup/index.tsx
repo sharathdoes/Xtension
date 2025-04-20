@@ -20,6 +20,7 @@ function Popup() {
     await chrome.storage.sync.set({ isEnabled: checked });
     
     // Notify content script of the change
+    // Send message to content script in active tab to enable/disable extension
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     tabs.forEach(tab => {
       if (tab.id) {
@@ -32,6 +33,9 @@ function Popup() {
   };
 
   const openSettings = () => {
+    // Opens the extension's options/settings page in a new tab
+    // This is a built-in Chrome extension API method
+    // The options page is defined in manifest.json and points to settings.html
     chrome.runtime.openOptionsPage();
   };
 
