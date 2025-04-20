@@ -41,11 +41,11 @@ function Popup() {
         <div className="flex items-center gap-3">
           <img 
             src="/logos/logo128.png" 
-            alt="Unbaited Logo" 
+            alt="Xtension Logo" 
             className="w-6 h-6 rounded-full"
           />
           <h1 className="text-xl font-semibold text-black m-0">
-            Twitter negativity Blocker
+            Xtension
           </h1>
         </div>
         <div className="flex items-center gap-2">
